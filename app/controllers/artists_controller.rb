@@ -19,12 +19,12 @@ class ArtistsController < ApplicationController
     end
 
     def edit
-        @article = Article.find(params[:id])
+        @artist = Artist.find(params[:id])
     end
 
     def update
-        @article = Article.find(params[:id])
-        @article.update(artist_params(:name))
+        @artist = Artist.find(params[:id])
+        @artist.update(artist_params(:name))
         redirect_to artist_path(@artist)
     end
 
